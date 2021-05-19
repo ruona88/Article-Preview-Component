@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ecf2f8;
+}
+
+.projectcontainer {
+  border: thin solid black;
+  width: 55%;
+  height: 40%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.projectcontainer .imagecontainer {
+  border: thin solid black;
+  width: 40%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.projectcontainer .imagecontainer .drawer {
+  width: 125%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.textcontainer {
+  z-index: 2;
+  background-color: white;
+  width: 60%;
+  height: 100%;
+  padding: 2em;
+}
+
+.textcontainer .maintext {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #48556a;
+  margin-bottom: 0.5em;
+}
+
+.textcontainer .minortext {
+  font-size: 0.7em;
+  color: #6d7f97;
+  font-weight: 700;
+  opacity: 0.75;
+  margin-bottom: 1.3em;
+}
+
+.textcontainer .clientdetails {
+  display: flex;
+}
+
+.textcontainer .clientdetails .michelle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.textcontainer .clientdetails .nameanddate {
+  margin-left: 1em;
+}
+
+.textcontainer .clientdetails .nameanddate .name {
+  color: #48556a;
+  font-size: 0.7em;
+  font-weight: 900;
+  margin-bottom: 0.3em;
+}
+
+.textcontainer .clientdetails .nameanddate .date {
+  color: #6d7f97;
+  font-size: 0.7em;
+  opacity: 0.6;
+}
+
+.textcontainer .clientdetails .sharecontainer {
+  margin-left: 35%;
+  border: thin solid black;
+  border-radius: 50px;
+  height: 30px;
+  width: 35px;
+  display: flex;
+  background-color: #ecf2f8;
+}
+
+.textcontainer .clientdetails .sharecontainer .share {
+  margin: auto;
+}
+
+@media only screen and (max-width: 375px) {
+  html, body {
+    font-size: 17px;
+  }
+  .projectcontainer {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas: "top" "bottom";
+  }
+  .projectcontainer .imagecontainer {
+    grid-area: top;
+    width: 100%;
+  }
+  .projectcontainer .textcontainer {
+    grid-area: bottom;
+    width: 100%;
+  }
+  .drawer {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
